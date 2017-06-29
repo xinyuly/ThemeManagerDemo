@@ -15,6 +15,7 @@
 - (void)th_setTextColor {
     [self th_removeObserver];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChangedTextColor) name:KThemeDidChangeNotification object:nil];
+    self.textColor = kSubColor;
 }
 
 - (void)themeChangedTextColor {
